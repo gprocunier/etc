@@ -15,7 +15,7 @@ init_snapshot() {
     fi
 
     echo "Creating a Boom snapshot..."
-    sudo boom snapshot create --title "Pre RHOSP Deploy" --root-lv /dev/rhel/root_snapshot
+    sudo boom create --title "Pre RHOSP Deploy" --rootlv rhel/root_snapshot
     if [ $? -ne 0 ]; then
         echo "Failed to create Boom snapshot."
         exit 1
